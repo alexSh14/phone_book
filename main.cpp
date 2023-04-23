@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    auto phoneBook = ImportFromFile("export.psv");
+    auto phoneBook = ImportFromFile("C:\Users\79619\Source\Repos\phone_book.git\export.psv");
     ShowAll(phoneBook);
     cout << " --- " << endl;
 
@@ -13,7 +13,11 @@ int main() {
     ShowAll(phoneBook);
     cout << " --- " << endl;
 
-    UpdateName(phoneBook, "C", "CC");
+    UpdateName(phoneBook, "D", "CC");
+    ShowAll(phoneBook);
+    cout << " --- " << endl;
+
+    UpdatePhone (phoneBook, "W", "CC");
     ShowAll(phoneBook);
     cout << " --- " << endl;
 
