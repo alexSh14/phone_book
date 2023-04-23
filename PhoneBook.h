@@ -9,29 +9,15 @@ void Insert(map<string, string>& phoneBook, string phone, string name) {
     phoneBook.insert(pair<string, string>(phone, name));
 }
 
-
-void UpdateName(map<string, string>&phoneBook, string phone, string name) {
-    // Проверка на существование телефона в телефонной книге
-    if (phoneBook.count(phone) > 0) {
-        // Если номер существует,то обновляем имя
-        phoneBook[phone] = name;
-    }
-    // Если номер не существует,то игнорируем
+void UpdateName(map<string, string>& phoneBook, string phone, string name) {
+    //TODO Добавить проверку на существование телефона (phone), перед обновлением имени
+    // Если не существует - то просто игнорируем.
+    phoneBook[phone] = name;
 }
+
 void UpdatePhone(map<string, string>& phoneBook, string phone, string name) {
-    // Существует ли это имя в телефонной книге?
-    for (auto& entry : phoneBook) {
-        if (entry.second == name) {
-            // Если имя есть в книге,то обновите номер телефона
-            phoneBook.erase(entry.first);
-            phoneBook[phone] = name;
-            break;
-        }
-    }
-    //Если имя не существует, то игнорируем
+    //TODO реализовать функцию
 }
-
-
 
 void Delete(map<string, string>& phoneBook, string phone) {
     phoneBook.erase(phone);
@@ -39,11 +25,6 @@ void Delete(map<string, string>& phoneBook, string phone) {
 
 string FindByPhone(map<string, string>& phoneBook, string phone) {
     //TODO Продумать что возвращать в случае отсутствия номера в массиве
-    // Проверка на существование телефона в телефонной книге
-    if (phoneBook.count(phone) < 0) {
-        // Если номер не существует,то обновляем имя
-        
-    }
     return phoneBook[phone];
 }
 
