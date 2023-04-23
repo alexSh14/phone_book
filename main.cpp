@@ -5,7 +5,8 @@
 using namespace std;
 
 int main() {
-    auto phoneBook = ImportFromFile("C:\Users\79619\Source\Repos\phone_book.git\export.psv");
+ 
+    auto phoneBook = ImportFromFile("export.psv");
     ShowAll(phoneBook);
     cout << " --- " << endl;
 
@@ -25,7 +26,7 @@ int main() {
     ShowAll(phoneBook);
     cout << " --- " << endl;
 
-    auto name = FindByPhone(phoneBook, "D");
+    auto name = FindByPhone(phoneBook, "Y");
     cout << name << endl;
     cout << " --- " << endl;
 
